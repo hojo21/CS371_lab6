@@ -44,7 +44,31 @@ public class PigLocalGame extends LocalGame {
      */
     @Override
     protected boolean makeMove(GameAction action) {
-        //TODO  You will implement this method
+        if (!players[gameState.getTurnID()].equals(action.getPlayer())) {
+            return false;
+        }
+
+        if (action instanceof PigHoldAction) {
+            if (gameState.getTurnID() == 0) {
+                gameState.setPlayer0Score(gameState.getPlayer0Score() + gameState.getRunningTotal());
+            } else {
+                gameState.setPlayer1Score(gameState.getPlayer1Score() + gameState.getRunningTotal());
+            }
+            return true;
+        }
+
+        if (action instanceof PigRollAction) {
+            gameState.setDieValue((int)(Math.random() * 6 + 1));
+
+            if (gameState.getDieValue() == 1) {
+                gameState.setRunningTotal(0);
+                gameState.setTurnID(gameState.getTurnID() + 1 % 2);
+                return true;
+            }
+
+            gameState.setRunningTotal(gameState.getDieValue() + gameState.getRunningTotal());
+            return true;
+        }
         return false;
     }//makeMove
 
@@ -53,7 +77,8 @@ public class PigLocalGame extends LocalGame {
      */
     @Override
     protected void sendUpdatedStateTo(GamePlayer p) {
-        //TODO  You will implement this method
+        PigGameState copyGS = new PigGameState(gameState);
+        p.sendInfo(copyGS);
     }//sendUpdatedSate
 
     /**
@@ -65,7 +90,14 @@ public class PigLocalGame extends LocalGame {
      */
     @Override
     protected String checkIfGameOver() {
-        //TODO  You will implement this method
+        if (gameState.getPlayer0Score() >= 50) {
+            return playerNames[0] + " has won!";
+        }
+
+        if (gameState.getPlayer1Score() >= 50) {
+            return playerNames[1] + "has won!";
+        }
+
         return null;
     }
 
