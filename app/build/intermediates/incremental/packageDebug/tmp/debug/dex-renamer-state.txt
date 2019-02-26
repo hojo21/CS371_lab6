@@ -1,4 +1,4 @@
-#Mon Feb 25 20:45:03 PST 2019
+#Mon Feb 25 21:30:28 PST 2019
 path.3=classes.dex
 path.2=classes.dex
 path.1=classes.dex
@@ -7,7 +7,7 @@ renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.3=P\:\\cs371\\lab6\\CS371PigGameStarter\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
-base.2=P\:\\cs371\\lab6\\CS371PigGameStarter\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
-base.1=P\:\\cs371\\lab6\\CS371PigGameStarter\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14
-base.0=P\:\\cs371\\lab6\\CS371PigGameStarter\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
+base.3=P\:\\cs371\\CS371_lab6\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\19
+base.2=P\:\\cs371\\CS371_lab6\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\17
+base.1=P\:\\cs371\\CS371_lab6\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\18
+base.0=P\:\\cs371\\CS371_lab6\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16

@@ -67,18 +67,24 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
             switch (((PigGameState)info).getDieValue()){
                 case 1:
                     dieImageButton.setImageResource(R.drawable.face1);
+                    break;
                 case 2:
                     dieImageButton.setImageResource(R.drawable.face2);
+                    break;
                 case 3:
                     dieImageButton.setImageResource(R.drawable.face3);
+                    break;
                 case 4:
                     dieImageButton.setImageResource(R.drawable.face4);
+                    break;
                 case 5:
                     dieImageButton.setImageResource(R.drawable.face5);
+                    break;
                 case 6:
                     dieImageButton.setImageResource(R.drawable.face6);
+                    break;
                 default:
-
+                    break;
             }
 
         }
