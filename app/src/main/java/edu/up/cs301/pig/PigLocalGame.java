@@ -54,7 +54,7 @@ public class PigLocalGame extends LocalGame {
             gameState.setRunningTotal(0);
 
             if (players.length > 0) {
-                gameState.setTurnID(gameState.getTurnID() + 1 % 2);
+                gameState.setTurnID((gameState.getTurnID() + 1) % 2);
             }
 
             return true;
@@ -67,7 +67,7 @@ public class PigLocalGame extends LocalGame {
                 gameState.setRunningTotal(0);
 
                 if (players.length > 0) {
-                    gameState.setTurnID(gameState.getTurnID() + 1 % 2);
+                    gameState.setTurnID((gameState.getTurnID() + 1) % 2);
                 }
                 return true;
             }
