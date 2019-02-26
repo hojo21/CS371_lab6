@@ -20,6 +20,7 @@ public class PigLocalGame extends LocalGame {
      */
     public PigLocalGame() {
         //TODO  You will implement this constructor
+
     }
 
     /**
