@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="P:\cs371\CS371_lab6\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="P:\cs371\CS371_lab6\app\src\debug\jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="P:\cs371\lab6\CS371PigGameStarter\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="P:\cs371\lab6\CS371PigGameStarter\app\src\debug\jniLibs"/></dataSet></merger>
