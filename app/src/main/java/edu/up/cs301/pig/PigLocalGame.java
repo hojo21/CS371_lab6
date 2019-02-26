@@ -1,5 +1,6 @@
 package edu.up.cs301.pig;
 
+import edu.up.cs301.game.Game;
 import edu.up.cs301.game.GamePlayer;
 import edu.up.cs301.game.LocalGame;
 import edu.up.cs301.game.actionMsg.GameAction;
@@ -21,16 +22,18 @@ public class PigLocalGame extends LocalGame {
      * This ctor creates a new game state
      */
     public PigLocalGame() {
-        //TODO  You will implement this constructor
-
+        gameState = new PigGameState();
     }
+
 
     /**
      * can the player with the given id take an action right now?
      */
     @Override
     protected boolean canMove(int playerIdx) {
-        //TODO  You will implement this method
+        if(playerIdx == gameState.getTurnID()){
+            return true;
+        }
         return false;
     }
 
