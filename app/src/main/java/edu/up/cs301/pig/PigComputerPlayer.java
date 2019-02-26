@@ -29,14 +29,15 @@ public class PigComputerPlayer extends GameComputerPlayer {
      */
     @Override
     protected void receiveInfo(GameInfo info) {
-        if(info instanceof NotYourTurnInfo){
+        if (info instanceof NotYourTurnInfo) {
             return;
         }
-        if(Math.random() > 0.5){
-            game.sendAction(new PigHoldAction(this));
-        }
-        else{
-            game.sendAction(new PigRollAction(this));
+        if (info instanceof PigGameState) {
+            if (Math.random() > 0.5) {
+                game.sendAction(new PigHoldAction(this));
+            } else {
+                game.sendAction(new PigRollAction(this));
+            }
         }
     }//receiveInfo
 

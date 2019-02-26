@@ -53,8 +53,12 @@ public class PigLocalGame extends LocalGame {
 
             gameState.setRunningTotal(0);
 
-            if (players.length > 0) {
-                gameState.setTurnID((gameState.getTurnID() + 1) % 2);
+            if (players.length > 1) {
+                if (gameState.getTurnID() == 0) {
+                    gameState.setTurnID(1);
+                } else {
+                    gameState.setTurnID(0);
+                }
             }
 
             return true;
@@ -66,8 +70,12 @@ public class PigLocalGame extends LocalGame {
             if (gameState.getDieValue() == 1) {
                 gameState.setRunningTotal(0);
 
-                if (players.length > 0) {
-                    gameState.setTurnID((gameState.getTurnID() + 1) % 2);
+                if (players.length > 1) {
+                    if (gameState.getTurnID() == 0) {
+                        gameState.setTurnID(1);
+                    } else {
+                        gameState.setTurnID(0);
+                    }
                 }
                 return true;
             }

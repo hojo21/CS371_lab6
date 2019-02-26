@@ -17,7 +17,7 @@ public class PigGameState extends GameState {
         player0Score = 0;
         player1Score = 0;
         runningTotal = 0;
-        dieValue = 0;
+        dieValue = 1;
     }
 
     public PigGameState(PigGameState toCopy) {
