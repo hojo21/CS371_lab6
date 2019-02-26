@@ -44,10 +44,6 @@ public class PigLocalGame extends LocalGame {
      */
     @Override
     protected boolean makeMove(GameAction action) {
-        if (!players[gameState.getTurnID()].equals(action.getPlayer())) {
-            return false;
-        }
-
         if (action instanceof PigHoldAction) {
             if (gameState.getTurnID() == 0) {
                 gameState.setPlayer0Score(gameState.getPlayer0Score() + gameState.getRunningTotal());
