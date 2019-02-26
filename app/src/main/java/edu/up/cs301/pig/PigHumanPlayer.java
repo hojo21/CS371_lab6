@@ -61,8 +61,14 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
     @Override
     public void receiveInfo(GameInfo info) {
         if(info instanceof PigGameState){
-            playerScoreTextView.setText(""+((PigGameState)info).getPlayer0Score());
-            oppScoreTextView.setText(""+((PigGameState)info).getPlayer1Score());
+            if (this.playerNum == 0) {
+                playerScoreTextView.setText(""+((PigGameState)info).getPlayer0Score());
+                oppScoreTextView.setText(""+((PigGameState)info).getPlayer1Score());
+            } else {
+                playerScoreTextView.setText(""+((PigGameState)info).getPlayer1Score());
+                oppScoreTextView.setText(""+((PigGameState)info).getPlayer0Score());
+            }
+
             turnTotalTextView.setText(""+((PigGameState)info).getRunningTotal());
             switch (((PigGameState)info).getDieValue()){
                 case 1:
